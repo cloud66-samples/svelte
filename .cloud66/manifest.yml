@@ -1,0 +1,4 @@
+prepress:
+  configuration:
+    prep_framework_command: yarn global add vite pnpm
+    build_output_dir: dist
