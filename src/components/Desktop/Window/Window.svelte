@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { draggable } from 'svelte-drag';
+  import { draggable } from '@neodrag/svelte';
   import { sineInOut } from 'svelte/easing';
   import { elevation } from '🍎/actions';
   import { appsConfig } from '🍎/configs/apps/apps-config';
@@ -114,7 +114,7 @@
   class:active={$activeApp === appID}
   style:width="{+width / remModifier}rem"
   style:height="{+height / remModifier}rem"
-  style:z-index={$appZIndices[appID] + ''}
+  style:z-index={$appZIndices[appID]}
   tabindex="-1"
   bind:this={windowEl}
   use:draggable={{
